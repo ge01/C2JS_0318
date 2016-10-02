@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="mystyle.css" />
-    <title>Calculating Fuel Economy</title>
+    <title>Sales Figures</title>
     <meta charset="utf-8">
     <!-- Bootstrap 3 is mobile-first -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,20 +19,24 @@
     <div class="container-fluid">
       <!-- jumbotron inside container to NOT extend to edge of screen -->
       <div class="jumbotron">
-        <h2 class="text-center">Calculating Fuel Economy</h2>
+        <h2 class="text-center">Sales Figures</h2>
         <!-- form element defines a form that is used to collect user input -->
         <form>
           <div class="form-group">
-            <label for="miles">Miles:</label>
-            <input id="miles" class="form-control" type="number" onclick="computeMPG" placeholder="Enter miles driven" />
+            <label for="day1">Day 1:</label>
+            <input id="day1" class="form-control" type="number" onclick="computeFigures" placeholder="Enter the sales for day 1" />
           </div>
           <div class="form-group">
-            <label for="gallons">Gallons:</label>
-            <input id="gallons" class="form-control" type="number" onclick="computeMPG" placeholder="Enter gallons of gas used" />
+            <label for="day2">Day 2:</label>
+            <input id="day2" class="form-control" type="number" onclick="computeFigures" placeholder="Enter the sales for day 2" />
+          </div>
+          <div class="form-group">
+            <label for="day3">Day 3:</label>
+            <input id="day3" class="form-control" type="number" onclick="computeFigures" placeholder="Enter the sales for day 3" />
           </div>
           <!-- Trigger the modal with a button -->
           <button id="myBtn" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
-            Calculate MPG
+            Calculate Total
           </button>
         </form>
         <!-- Modal -->
@@ -42,10 +46,10 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Your Car's MPG</h4>
+                <h4 class="modal-title">Sales Figures</h4>
               </div>
               <div class="modal-body">
-                <h2 id="outMPG"></h2>
+                <h2 id="outTotal"></h2>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
